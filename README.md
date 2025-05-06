@@ -24,7 +24,7 @@ A modern starter template for building Cloudflare Workers applications using Hon
 1. Clone the repository:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/trutohq/hono-workers-starter.git
    cd hono-workers-starter
    ```
 
