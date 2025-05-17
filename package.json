@@ -1,0 +1,38 @@
+{
+  "name": "hono-workers-starter",
+  "volta": {
+    "node": "18.18.0",
+    "npm": "10.2.5",
+    "yarn": "4.9.1"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write 'src/**/*.{ts,js}'",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format:check": "prettier --check 'src/**/*.{ts,js}'",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "hono": "4.7.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "4.20250320.0",
+    "@typescript-eslint/eslint-plugin": "7.3.1",
+    "@typescript-eslint/parser": "7.3.1",
+    "eslint": "8.56.0",
+    "husky": "9.0.11",
+    "lint-staged": "15.5.1",
+    "prettier": "3.5.3",
+    "typescript": "5.4.2",
+    "wrangler": "4.14.2"
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
+}
